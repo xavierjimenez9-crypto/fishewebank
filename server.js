@@ -1,3 +1,8 @@
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const app = express();
+
 // Endpoint para mostrar resultados en tiempo real
 app.get('/dashboard', (req, res) => {
   const filePath = path.join(__dirname, 'resultado.txt');
@@ -34,10 +39,6 @@ app.get('/descargar-resultado', (req, res) => {
   const filePath = path.join(__dirname, 'resultado.txt');
   res.download(filePath, 'resultado.txt');
 });
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
