@@ -1,7 +1,6 @@
 {
   "name": "fishewebank",
   "version": "1.0.0",
-  "description": "Proyecto Node.js para Render",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
